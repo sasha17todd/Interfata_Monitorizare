@@ -1,0 +1,86 @@
+.auth-body {
+  position: relative;
+  min-height: 100vh;
+  background: url("/imagine.png") center/cover no-repeat fixed;
+  overflow: hidden;
+}
+
+.auth-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); /* intensitate overlay */
+  z-index: 0;
+}
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-card h1 {
+  margin-bottom: 20px;
+  color: #1d6649;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card input {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-card button {
+  background: #267e5a;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-card button:hover {
+  background: #104732;
+}
+
+.auth-card p {
+  margin-top: 20px;
+}
+
+.auth-card a {
+  color: #1c9ae2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #e63946;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { onContainers, onStats, onHours } from "./firebase";
+import { signOut } from "firebase/auth";
+import { auth } from "./firebase";
+import { FaSignOutAlt } from "react-icons/fa"; // icon logout
 
 import {
   RadialBarChart, RadialBar,
@@ -53,6 +56,10 @@ export default function StatsPage() {
   const [stats, setStats] = useState({});
   const [hours, setHours] = useState({});
 
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
+
   useEffect(() => onContainers(setNiv, id), [id]);
   useEffect(() => onStats(setStats, id), [id]);
   useEffect(() => onHours(setHours, id), [id]);
@@ -66,7 +73,13 @@ export default function StatsPage() {
   return (
     <>
       <header className="topbar">
-        <h1>Statistici pentru {id}</h1>
+        <div className="title-group">
+          <img src="/icon-192.png" alt="logo" />
+          <h1>Monitorizare {id}</h1>
+        </div>
+        <button onClick={handleLogout} className="logout-btn">
+          <FaSignOutAlt /> Logout
+        </button>
       </header>
 
       <main className="wrap">
