@@ -1,0 +1,29 @@
+.map-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eee;
+}
+
+.bins {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.bins a {
+  text-align: center;
+  color: #eee;
+  text-decoration: none;
+}
+
+.bins img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.bins img:hover {
+  transform: scale(1.1);
+}
