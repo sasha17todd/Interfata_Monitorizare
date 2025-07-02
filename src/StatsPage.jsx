@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { onContainers, onStats, onHours } from "./firebase";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
-import { FaSignOutAlt } from "react-icons/fa"; // icon logout
+import { FaSignOutAlt } from "react-icons/fa";
 
 import {
   RadialBarChart, RadialBar,
