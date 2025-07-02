@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
-import { FaSignOutAlt } from "react-icons/fa"; // icon logout
+import { FaSignOutAlt } from "react-icons/fa";
 
 
 export default function MapPage() {
