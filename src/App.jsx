@@ -19,7 +19,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignUpPage />} /> {/* ✅ ruta nouă */}
+      <Route path="/signup" element={<SignUpPage />} />
       <Route path="/" element={
         <RequireAuth>
           <MapPage />
